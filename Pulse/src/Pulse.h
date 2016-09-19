@@ -32,6 +32,15 @@ public:
     const unsigned int dly  // pulse length in milliseconds
   );
   
+  // Constructor, default active level of HIGH,
+  // useful for Arduino's onboard LED
+  // @param pin digital output pin to be pulsed
+  // @param dly length of pulse in milliseconds
+  Pulse(
+    const byte pin,         // digital output pin
+    const unsigned int dly  // pulse length in milliseconds
+  );
+  
   // Check if it's time to update this object's state.
   // @return true if update of state occurred, false otherwise
   virtual bool update();

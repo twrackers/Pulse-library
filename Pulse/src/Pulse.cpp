@@ -12,6 +12,13 @@ Pulse::Pulse(
   digitalWrite(m_pin, (m_activeLevel == LOW ? HIGH : LOW));
 }
 
+Pulse::Pulse(
+  const byte pin, 
+  const unsigned int dly
+) : Pulse(pin, HIGH, dly)
+{
+}
+
 bool Pulse::update()
 {
   // If it's update time...
