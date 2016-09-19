@@ -1,12 +1,11 @@
 #include <Pulse.h>
 #include <StateMachine.h>
 
-Pulse pulse(13, 250);
+Pulse pulse(13, LOW, 100);
 StateMachine pace(1000, true);
 
 void setup()
 {
-  Serial.begin(115200);
 }
 
 void loop()
