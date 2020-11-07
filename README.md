@@ -6,7 +6,7 @@ The `OneShot` class is derived from the `OneShot` class ([https://github.com/twr
 
 Because a *Pulse* object is derived from *OneShot*, it can act as a *watchdog* timer with a GPIO pin in output mode connected to it.  The *Pulse* library includes a [`WatchdogSim` sketch](https://github.com/twrackers/Pulse-library/blob/main/examples/WatchdogSim/WatchdogSim.ino) in the `examples` directory.  This sketch shows how the `Pulse` class can be used as a watchdog timer driving the Arduino's built-in LED as its output.  The sketch requires the `OneShot` class and the `StateMachine` class, in addition to the `Pulse` class.
 
-The *Pulse* library also includes a `Pulse_test` example sketch, which uses a *Pulse* object to briefly flash the built-in LED, triggered once per second by a *StateMachine* object.  This sketch also requires the `OneShot` and `StateMachine` classes, in addition to the `Pulse` class.
+The *Pulse* library also includes a [`Pulse_test` example sketch](https://github.com/twrackers/Pulse-library/blob/main/examples/Pulse_test/Pulse_test.ino), which uses a *Pulse* object to briefly flash the built-in LED, triggered once per second by a *StateMachine* object.  This sketch also requires the `OneShot` and `StateMachine` classes, in addition to the `Pulse` class.
 
 ## Dependencies ##
 
