@@ -1,6 +1,6 @@
 # Pulse #
 
-The `OneShot` class is derived from the `OneShot` class ([https://github.com/twrackers/OneShot-library](https://github.com/twrackers/OneShot-library)), which is itself derived from the `StateMachine` class ([https://github.com/twrackers/StateMachine-library](https://github.com/twrackers/StateMachine-library)).  A *Pulse* object will create a rising or falling pulse of a fixed duration on one of the GPIO pins when it is triggered.  Like the *OneShot* class, a *Pulse* object is *retriggerable*, which means if it is triggered again before a pulse completes, the pulse timing will restart, extending the pulse.
+The `Pulse` class is derived from the `OneShot` class ([https://github.com/twrackers/OneShot-library](https://github.com/twrackers/OneShot-library)), which is itself derived from the `StateMachine` class ([https://github.com/twrackers/StateMachine-library](https://github.com/twrackers/StateMachine-library)).  A *Pulse* object will create a rising or falling pulse of a fixed duration on one of the GPIO pins when it is triggered.  Like the *OneShot* class, a *Pulse* object is *retriggerable*, which means if it is triggered again before a pulse completes, the pulse timing will restart, extending the pulse.
 
 ## Examples ##
 
