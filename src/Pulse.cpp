@@ -3,20 +3,14 @@
 Pulse::Pulse(
   const byte pin, 
   const byte active,
-  const unsigned int dly
-) : m_os(OneShot(dly, false)), m_pin(pin), m_activeLevel(active != LOW)
+  const unsigned long dly,
+  const bool retriggerable
+) : m_os(OneShot(dly, retriggerable)), m_pin(pin), m_activeLevel(active != LOW)
 {
   // Set pin to output mode.
   pinMode(m_pin, OUTPUT);
   // Set pin to inactive level.
   digitalWrite(m_pin, (m_activeLevel == LOW ? HIGH : LOW));
-}
-
-Pulse::Pulse(
-  const byte pin, 
-  const unsigned int dly
-) : Pulse(pin, HIGH, dly)
-{
 }
 
 bool Pulse::update()

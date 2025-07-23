@@ -26,19 +26,12 @@ public:
   // @param pin digital output pin to be pulsed
   // @param active specify active LOW or HIGH pulse
   // @param dly length of pulse in milliseconds
+  // @param retriggerable true if pulse can be retriggered
   Pulse(
-    const byte pin,         // digital output pin
-    const byte active,      // active LOW or HIGH
-    const unsigned int dly  // pulse length in milliseconds
-  );
-  
-  // Constructor, default active level of HIGH,
-  // useful for Arduino's onboard LED
-  // @param pin digital output pin to be pulsed
-  // @param dly length of pulse in milliseconds
-  Pulse(
-    const byte pin,         // digital output pin
-    const unsigned int dly  // pulse length in milliseconds
+    const byte pin,                   // digital output pin
+    const byte active,                // active LOW or HIGH
+    const unsigned long dly,          // pulse length in milliseconds
+    const bool retriggerable = true   // retriggerable
   );
   
   // Check if it's time to update this object's state.
