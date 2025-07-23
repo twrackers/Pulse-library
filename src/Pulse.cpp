@@ -4,7 +4,7 @@ Pulse::Pulse(
   const byte pin, 
   const byte active,
   const unsigned int dly
-) : m_os(OneShot(dly)), m_pin(pin), m_activeLevel(active != LOW)
+) : m_os(OneShot(dly, false)), m_pin(pin), m_activeLevel(active != LOW)
 {
   // Set pin to output mode.
   pinMode(m_pin, OUTPUT);
