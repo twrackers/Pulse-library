@@ -3,11 +3,10 @@
 
 #include <OneShot.h>
 
-// Implement class to generate a single active-high pulse on a
-// digital output pin.  Useful for flashing an LED, especially
-// the one built into most Arduino-class boards, usually on pin 13.
-// Active-high is the default because that's what the pin 13 LED
-// requires to turn on.
+// Implement class to generate a single pulse, active-high or
+// active-low, on a digital output pin.  Useful for flashing an LED,
+// especially the LED_BUILTIN which exists on most Arduino-class boards
+// (usually on pin 13).
 //
 // Dependencies
 //   Pulse
