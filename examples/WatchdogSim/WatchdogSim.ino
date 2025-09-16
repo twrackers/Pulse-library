@@ -11,19 +11,20 @@
 // operation.
 //
 // In this sketch, a Pulse object simulates the watchdog timer.  The Pulse
-// class is derived from the OneShot class.  A OneShot object is in an off
-// state until it is triggered.  Once triggered, the OneShot goes to an on
-// state for a preset time period, then returns to its off state.  If it
-// is triggered again while already switched on, the timer gets reset back
-// to zero, extending the on time.  As long as the OneShot keeps getting
+// object contains an OneShot object in retriggerable mode.  A OneShot object
+// is in an off state until it is triggered.  Once triggered, the OneShot
+// goes to an on tate for a preset time period, then returns to its off state.
+// If it is triggered again while already switched on, the timer gets reset
+// back to zero, extending the on time.  As long as the OneShot keeps getting
 // triggered before it times out, it will remain on.
 //
-// The Pulse object is a OneShot with an assigned GPIO pin and an on state
-// of either HIGH or LOW.  In this sketch, the Pulse is tied to the onboard
-// LED, with LOW (LED off) as the Pulse's on state.  As long as the Pulse
-// is triggered frequently enough (within 200 msec of the previous trigger),
-// the LED will be off.  If the Pulse times out because a trigger did not
-// occur in time, the LED will turn on until a trigger eventually happens.
+// The Pulse object has an assigned GPIO pin, and a OneShot which has an on
+// state of either HIGH or LOW.  In this sketch, the Pulse is tied to the
+// onboard LED, with LOW (LED off) as the Pulse's on state.  As long as the
+// Pulse is triggered frequently enough (within 200 msec of the previous
+// trigger), the LED will remain off.  If the Pulse times out because a
+// trigger did not occur in time, the LED will turn on until a trigger
+// eventually happens.
 
 #include <Arduino.h>
 #include <StateMachine.h>
